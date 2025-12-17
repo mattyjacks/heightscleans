@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Heights Cleans</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body data-page="contact">
+    <div id="header-placeholder"></div>
+
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Ready to experience the Heights Cleans difference? Contact us today!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>1514 W Lillian Ave<br>Arlington Heights, IL 60004<br>Serving areas within 100 miles</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:8152179898">(815) 217-9898</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:heightscleans54@gmail.com">heightscleans54@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 4:00 PM<br>
+                            Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Request a Free Quote</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(815) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="Residential Cleaning">Residential Cleaning</option>
+                                <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                <option value="Deep Cleaning">Deep Cleaning</option>
+                                <option value="Window Cleaning">Window Cleaning</option>
+                                <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
+                                <option value="Carpet Cleaning">Carpet Cleaning</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Service Address</label>
+                            <input type="text" id="address" name="address" placeholder="Street Address or Zip Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Details</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your cleaning needs..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div id="turnstile-container" class="turnstile-container"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Serving Arlington Heights & Surrounding Areas</h2>
+            <p class="map-description">We proudly serve Arlington Heights and the surrounding communities in the northwest Chicago suburbs.</p>
+            <div class="service-areas">
+                <span class="area-badge">Arlington Heights</span>
+                <span class="area-badge">Mount Prospect</span>
+                <span class="area-badge">Palatine</span>
+                <span class="area-badge">Rolling Meadows</span>
+                <span class="area-badge">Elk Grove Village</span>
+                <span class="area-badge">Des Plaines</span>
+                <span class="area-badge">Schaumburg</span>
+                <span class="area-badge">Buffalo Grove</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="scripts/header.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="scripts/contactForm.js"></script>
+</body>
+</html>
