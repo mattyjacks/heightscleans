@@ -161,8 +161,28 @@ Submitted on ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' 
         const data = await response.json();
 
         if (!response.ok) {
-            console.error('Brevo API error:', data);
-            return res.status(response.status).json({ error: 'Failed to send email', details: data });
+            console.error('Brevo API error:', { status: response.status, data });
+
+            const brevoMessage = (data && (data.message || data.error || data.code)) ? String(data.message || data.error || data.code) : '';
+
+            if (response.status === 401 && /unrecognised ip|unrecognized ip/i.test(brevoMessage)) {
+                return res.status(401).json({
+                    error: 'Email provider rejected the request (IP restriction).',
+                    details: {
+                        provider: 'brevo',
+                        message: brevoMessage
+                    }
+                });
+            }
+
+            return res.status(response.status).json({
+                error: 'Email provider request failed.',
+                details: {
+                    provider: 'brevo',
+                    message: brevoMessage,
+                    raw: data
+                }
+            });
         }
 
         return res.status(200).json({ 

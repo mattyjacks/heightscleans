@@ -1,6 +1,22 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.heightscleans.com"
+        }
+      ],
+      "destination": "https://heightscleans.com/$1",
+      "permanent": true
+    }
+  ],
   "functions": {
     "api/contact.js": {
+      "maxDuration": 10
+    },
+    "api/config.js": {
       "maxDuration": 10
     }
   }
